@@ -18,5 +18,5 @@ const logoutValidation = [body("token").isString()];
 
 auth
   .post("/auth/register", registrationValidation, AuthController.registerUser)
-  .post("/auth/login", loginValidation, AuthController.loginUser);
-// .post("/auth/logout", logoutValidation, AuthController.logoutUser);
+  .post("/auth/login", loginValidation, AuthController.loginUser)
+  .post("/auth/logout", logoutValidation, AuthController.logoutUser);

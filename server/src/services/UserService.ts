@@ -21,7 +21,6 @@ export class UserService {
       where: { id: id },
       data: {
         name,
-        password,
       },
     });
 

@@ -7,11 +7,11 @@ import { NotFoundError } from "../errors/NotFoundError";
 import { BadRequestError } from "../errors/BadRequestError";
 import blacklist from "../middlewares/handleBlacklist";
 
-const prisma = new PrismaClient();
-
 export class AuthService {
+  private prisma = new PrismaClient();
+
   async registerUser({ name, email, password }) {
-    const userExist = await prisma.user.findFirst({
+    const userExist = await this.prisma.user.findFirst({
       where: {
         email,
       },
@@ -23,7 +23,7 @@ export class AuthService {
 
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    await prisma.user.create({
+    await this.prisma.user.create({
       data: {
         name,
         email,
@@ -38,7 +38,7 @@ export class AuthService {
   }
 
   async loginUser({ email, password }) {
-    const user = await prisma.user.findFirst({
+    const user = await this.prisma.user.findFirst({
       where: {
         email,
       },

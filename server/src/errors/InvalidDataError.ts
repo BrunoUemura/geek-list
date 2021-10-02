@@ -1,5 +1,5 @@
-import { StatusCodes } from "http-status-codes";
-import { CustomError } from "./CustomError";
+import { StatusCodes } from 'http-status-codes';
+import { CustomError } from './CustomError';
 
 export class InvalidDataError extends CustomError {
   statusCode = StatusCodes.BAD_REQUEST;

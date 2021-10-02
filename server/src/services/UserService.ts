@@ -1,5 +1,6 @@
-import { PrismaClient } from "@prisma/client";
-import { StatusCodes } from "http-status-codes";
+import { PrismaClient } from '@prisma/client';
+import { StatusCodes } from 'http-status-codes';
+import { UserUpdate } from '../config/interfaces/userInterface';
 
 export class UserService {
   private prisma = new PrismaClient();
@@ -16,7 +17,7 @@ export class UserService {
     });
   }
 
-  async updateUser(id: string, { name, password }) {
+  async updateUser(id: string, { name, password }: UserUpdate) {
     await this.prisma.user.update({
       where: { id: id },
       data: {
@@ -26,7 +27,7 @@ export class UserService {
 
     return {
       status: StatusCodes.OK,
-      message: "User updated successfully",
+      message: 'User updated successfully',
     };
   }
 
@@ -39,7 +40,7 @@ export class UserService {
 
     return {
       status: StatusCodes.OK,
-      message: "User deleted successfully",
+      message: 'User deleted successfully',
     };
   }
 }

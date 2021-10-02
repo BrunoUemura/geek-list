@@ -1,5 +1,5 @@
-import { StatusCodes } from "http-status-codes";
-import { CustomError } from "./CustomError";
+import { StatusCodes } from 'http-status-codes';
+import { CustomError } from './CustomError';
 
 export class NotFoundError extends CustomError {
   statusCode = StatusCodes.NOT_FOUND;

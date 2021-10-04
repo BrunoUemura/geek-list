@@ -15,12 +15,15 @@ model User {
   name String
   email String @unique
   password String
+  list List[]
   created_at DateTime @default(now())
   updated_at DateTime @default(now()) @updatedAt
 }
 
 model List {
   id String @id @default(uuid())
+  user User @relation(fields: [user_id], references: [id])
+  user_id String
   type String
   title String
   created_at DateTime @default(now())

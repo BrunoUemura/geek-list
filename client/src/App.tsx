@@ -1,15 +1,11 @@
 import React, { FC } from "react";
-import { Navbar } from "./components";
-import "./styles/App.css";
+import Home from "./pages/home";
+import Login from "./pages/login";
 
 const App: FC = () => {
   return (
-    <div className="app">
-      <div className="navbar">
-        <Navbar />
-      </div>
-      <div className="main"></div>
-      <div className="footer"></div>
+    <div className="App">
+      <Login />
     </div>
   );
 };

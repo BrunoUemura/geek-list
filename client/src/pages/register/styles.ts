@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const RegisterContainer = styled.div`
   display: flex;
@@ -31,13 +31,13 @@ export const RegisterForm = styled.div`
   height: 500px;
 
   h1 {
-    font-family: "Roboto Slab";
+    font-family: 'Roboto Slab';
     font-size: 40px;
     margin-bottom: 20px;
   }
 
   h4 {
-    font-family: "Roboto Slab";
+    font-family: 'Roboto Slab';
     font-weight: 300;
     margin-top: 40px;
     font-size: 15px;

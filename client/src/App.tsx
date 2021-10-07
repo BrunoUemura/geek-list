@@ -1,6 +1,6 @@
-import React, { FC } from "react";
-import Home from "./pages/home";
-import Login from "./pages/login";
+import React, { FC } from 'react';
+import Home from './pages/home';
+import Login from './pages/login';
 
 const App: FC = () => {
   return (

@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { BiUser } from "react-icons/bi";
-import { MdEmail, MdLock } from "react-icons/md";
-import { HiEye, HiEyeOff } from "react-icons/hi";
+import { BiUser } from 'react-icons/bi';
+import { MdEmail, MdLock } from 'react-icons/md';
+import { HiEye, HiEyeOff } from 'react-icons/hi';
 
-import { RegisterContainer, RegisterForm, RegisterLogo } from "./styles";
+import { RegisterContainer, RegisterForm, RegisterLogo } from './styles';
 
 const Register = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [show, setShow] = useState(false);
 
   const handleEyeClick = (e: any) => {
@@ -20,10 +20,7 @@ const Register = () => {
   return (
     <RegisterContainer>
       <RegisterLogo>
-        <img
-          src="https://images-na.ssl-images-amazon.com/images/I/41da3NERJ4L.png"
-          alt="Login App"
-        />
+        <img src="https://images-na.ssl-images-amazon.com/images/I/41da3NERJ4L.png" alt="Login App" />
       </RegisterLogo>
       <RegisterForm>
         <h1>Task List</h1>
@@ -49,17 +46,13 @@ const Register = () => {
         <div className="register-input-password">
           <MdLock />
           <input
-            type={show ? "text" : "password"}
+            type={show ? 'text' : 'password'}
             placeholder="*****"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
           <div className="register-input-password-eye">
-            {show ? (
-              <HiEye size={20} onClick={handleEyeClick} />
-            ) : (
-              <HiEyeOff size={20} onClick={handleEyeClick} />
-            )}
+            {show ? <HiEye size={20} onClick={handleEyeClick} /> : <HiEyeOff size={20} onClick={handleEyeClick} />}
           </div>
         </div>
         <button type="submit">Sign up</button>

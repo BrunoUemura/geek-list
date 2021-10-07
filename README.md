@@ -3,4 +3,4 @@
 Geek List
 
 Project idea
-![alt text](./docs/project.png)
+![alt text](./assets/project.png)

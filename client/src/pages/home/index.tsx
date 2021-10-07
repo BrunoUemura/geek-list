@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
-import { MainContainer, MainHeader, MainBody } from "./styles";
+import { MainContainer, MainHeader, MainBody } from './styles';
 
 const Home = () => {
   return (
